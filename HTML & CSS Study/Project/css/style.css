@@ -43,6 +43,9 @@ p {
   letter-spacing: -0.01em;
 }
 
+.button-group {
+  text-align: center;
+}
 .fill-button {
   display: inline-flex;
   justify-content: center;
@@ -155,6 +158,10 @@ p {
 }
 
 /* Program Part */
+/* .program {
+  display: flex;
+  flex-direction: column;
+} */
 .program strong {
   color: #009b4d;
   font-size: 16px;
@@ -168,7 +175,8 @@ p {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   /* box-shadow: 0px 1px rgba(0, 0, 0, 0.1); */
 }
@@ -270,9 +278,129 @@ p {
 }
 /* >= 768px */
 @media screen and (min-width: 768px) {
-  p {
+  .landing {
+    height: 568px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+  }
+  .landing-title {
+    font-size: 70px;
+    line-height: 1.02857;
+    letter-spacing: -0.05em;
+    margin-bottom: 32px;
+  }
+  .landing-description {
     font-size: 22px;
     line-height: 1.3636363636;
+    margin-bottom: 32px;
+  }
+
+  .fill-button,
+  .fill-button.inverted {
+    width: 160px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 1.55555;
+    margin-right: 16px;
+  }
+
+  .testimonials {
+    height: 340px;
+    padding: 80px 255px;
+    margin-bottom: 0;
+  }
+
+  .testimonials-title {
+    font-size: 26px;
+    line-height: 1.3076;
+  }
+
+  .testimonials-desc,
+  .program strong,
+  .content-desc,
+  .curriculum strong {
+    font-size: 22px;
+    line-height: 1.3636363636;
+  }
+
+  .program {
+    text-align: center;
+  }
+
+  .content-title {
+    font-size: 56px;
+    line-height: 1;
+    margin-top: 24px;
+  }
+
+  .program-header .content-desc {
+    width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .program-contents {
+    margin-left: auto;
+    margin-right: auto;
+    width: 930px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .program-content {
+    width: 290px;
+    margin-bottom: 0;
+  }
+
+  .curriculum-header .content-desc {
+    margin-bottom: 72px;
+  }
+  .curriculum-image {
+    content: "";
+    display: block;
+    width: 450px;
+    height: 450px;
+    background-image: url("../assets/img-curriculum.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center, center;
+  }
+  .curriculum-detail-item {
+    /* width: 450px; */
+    font-size: 18px;
+    line-height: 1.444444;
+  }
+
+  .banner {
+    padding: 80px 255px;
+  }
+
+  .banner-image {
+    height: 285px;
+  }
+
+  .banner-header,
+  .misc {
+    text-align: left;
+  }
+
+  .banner-header .content-title {
+    font-size: 40px;
+    line-height: 1;
+  }
+  .banner-form input {
+    width: 362px;
+  }
+  .banner-form .fill-button.full.small {
+    width: 160px;
+  }
+
+  .footer {
+    padding: 0 255px;
+  }
+  .footer .link {
+    display: inline;
+    margin-right: 16px;
   }
 }
 /* Custom Grid System - Fix container width */
