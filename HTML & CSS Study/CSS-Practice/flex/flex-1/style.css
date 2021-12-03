@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tab-menu {
+  max-width: 540px;
+  border-bottom: 1px solid #e5eaef;
+  background-color: white;
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  align-items: center;
+  /* flex-wrap: nowrap; */
+}
+
+.tab-menu-item.selected {
+  border-bottom: 2px solid #2860e1;
+}
+
+.tab-menu-item.selected a {
+  color: #2860e1;
+  font-weight: 500;
+}
+
+.tab-menu-item a {
+  display: block;
+  margin-right: 16px;
+  padding: 16px 20px;
+}

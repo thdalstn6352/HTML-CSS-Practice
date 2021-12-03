@@ -1,0 +1,127 @@
+.like-button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+  background-image: url("./assets/icon-favorite.svg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+body {
+  height: 100vh;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.card {
+  display: flex;
+  width: 840px;
+  padding: 24px;
+  background-color: white;
+}
+
+.card-image {
+  width: 300px;
+  height: 200px;
+  background-image: url("./assets/img-house.jpeg");
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  margin-right: 24px;
+  position: relative;
+}
+.card-content {
+  flex-grow: 1;
+}
+
+.card-content .card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.card-content .property-rate::before {
+  content: "";
+  display: inline-block;
+  background-image: url("./assets/icon-star.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.property-rate {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #7d858f;
+}
+
+.property-rate strong {
+  margin-right: 2px;
+  font-weight: 400;
+  color: #151b26;
+}
+
+.card-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #151b26;
+}
+
+.card-content .plus-badge {
+  background-color: #92174d;
+  padding: 1px 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.card-detail dd {
+  margin: 0;
+}
+
+.property-type span {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #7d858f;
+}
+.property-detail {
+  font-size: 14px;
+  line-height: 1.1428571429;
+  color: #7d858f;
+}
+.card-detail dd span::after {
+  content: "・";
+  margin: 0 6px;
+}
+
+.card-detail dd span:last-child::after {
+  content: "";
+  margin: 0;
+}
