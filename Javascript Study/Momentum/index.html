@@ -8,6 +8,12 @@
     <title>Momentum</title>
   </head>
   <body>
+    <div class="navbar">
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <form id="login-form" class="hidden">
       <input
         required
@@ -17,17 +23,20 @@
       />
       <button>Log In</button>
     </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <h2 id="clock"></h2>
-    <div id="quote">
-      <span></span>
-      <span></span>
+    <div class="main">
+      <div class="clock-greeting">
+        <div id="clock"></div>
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
+      <div class="todo">
+        <p>What is your plan for today?</p>
+        <form id="todo-form">
+          <input type="text" required />
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
     </div>
-    <div id="weather">
+    <div id="quote">
       <span></span>
       <span></span>
     </div>
