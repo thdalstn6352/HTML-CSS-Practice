@@ -103,7 +103,8 @@ li {
   margin: 0;
   margin-top: -30px;
 }
-.todo {
+.todo,
+.login {
   font-size: 2rem;
   display: flex;
   flex-direction: column;
@@ -111,11 +112,13 @@ li {
   max-width: 87.5%;
 }
 
-#todo-form {
+#todo-form,
+#login-form {
   width: 100%;
 }
 
-.todo #todo-form input {
+.todo #todo-form input,
+.login #login-form input {
   background-color: transparent;
   border: none;
   width: 100%;
@@ -127,11 +130,30 @@ li {
   text-align: center;
 }
 
-#quote {
-  height: 5%;
-  font-size: 1.37rem;
+#todo-list li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+}
+#todo-list span {
+  display: inline-block;
+}
+#todo-list button {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  /* margin-bottom: 30px; */
+}
+#quote {
+  font-size: 1.37rem;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.footer {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
