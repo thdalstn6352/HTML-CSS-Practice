@@ -13,9 +13,9 @@ function App() {
       return;
     }
     setToDos([toDo, ...toDos]);
+    console.log(toDos);
     setToDo("");
   };
-  console.log(toDos);
   return (
     <div>
       <h1>My To Dos ({toDos.length})</h1>
