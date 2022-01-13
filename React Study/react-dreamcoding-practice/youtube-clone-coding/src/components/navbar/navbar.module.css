@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: black;
+    margin-right: 1em;
+}
+.logo {
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+
+.title {
+    color: white;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+}
+.input {
+    flex-basis: 100%;
+    font-size: 1.2rem;
+    outline: 0;
+    height: 50px;
+}
+.search {
+    width: 1rem;
+    background-color: darkgrey;
+
+}
