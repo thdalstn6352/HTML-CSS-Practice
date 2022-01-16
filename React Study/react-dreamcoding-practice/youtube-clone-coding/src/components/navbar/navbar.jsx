@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, memo } from "react"
 import styles from './navbar.module.css'
 
-const Navbar = ({onSubmit}) => {
+const Navbar = memo(({onSubmit}) => {
     const [value, setValue] = useState("");
     const handleInput = ((event) => {
         setValue(event.target.value);
@@ -27,5 +27,5 @@ const Navbar = ({onSubmit}) => {
         </nav>
     )
 }
-
+)
 export default Navbar

@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useCallback} from 'react';
 import VideoList from './components/video_list/video_list';
 import Navbar from './components/navbar/navbar';
 import VideoDetail from './components/video_detail/video_detail';
@@ -11,12 +11,15 @@ function App({youtube}) {
   useEffect(()=> {
     youtube.mostPopular()
     .then(videos => setVideos(videos));
-  }, []);
+  }, [youtube]);
 
-  const handleSearch = (query) => {
+  const handleSearch = useCallback((query) => {
+    setSelectedVideo(null);
     youtube.search(query)
-    .then(videos => setVideos(videos))
-  };
+    .then((videos) => {
+      setVideos(videos);
+    })
+  }, [youtube]);
 
   const selectVideo = ((video) => {
     setSelectedVideo(video);
