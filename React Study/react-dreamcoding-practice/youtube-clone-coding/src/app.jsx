@@ -25,19 +25,21 @@ function App({youtube}) {
     setSelectedVideo(video);
   })
   
-  return <div className={styles.app}>
-    <Navbar onSubmit={handleSearch}/>
-    <section className={styles.content}>
-      {selectedVideo && 
-        <div className={styles.detail}>
-          <VideoDetail video={selectedVideo}/>
+  return (
+    <div className={styles.app}>
+      <Navbar onSubmit={handleSearch}/>
+      <section className={styles.content}>
+        {selectedVideo && 
+          <div className={styles.detail}>
+            <VideoDetail video={selectedVideo}/>
+          </div>
+        }
+        <div className={styles.list}>
+          <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'list' : 'grid'}/>
         </div>
-      }
-      <div className={styles.list}>
-        <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'list' : 'grid'}/>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
+  );
   
 }
 

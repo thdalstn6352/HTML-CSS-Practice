@@ -40,8 +40,6 @@
 .thumbnail {
     width: 40%;
     height: 151px;
-    /* height: 100%; */
-    /* margin-right: 10px; */
 }
 .title,
 .channel {
@@ -50,4 +48,10 @@
 
 .channel {
     font-size: 0.9rem;
+}
+
+@media screen and (max-width: 780px) {
+    .container.grid {
+        width: 100%;
+    }
 }

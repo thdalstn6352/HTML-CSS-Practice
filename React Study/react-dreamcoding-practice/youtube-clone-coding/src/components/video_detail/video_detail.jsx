@@ -3,7 +3,8 @@ import styles from './video_detail.module.css';
 
 const VideoDetail = ({video}) => {
     console.log(video)
-    return <section className={styles.detail}>
+    return (
+    <section className={styles.detail}>
         <iframe 
             title={video.title}
             className={styles.video}
@@ -18,6 +19,7 @@ const VideoDetail = ({video}) => {
         <h3>{video.snippet.channelTitle}</h3>
         <pre className={styles.description}>{video.snippet.description}</pre>
     </section>
+    );
 }
 
 export default VideoDetail;
