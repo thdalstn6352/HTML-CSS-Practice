@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import ReactDOM from 'react-dom';
+import App from './components/App';
+import { LocaleProvider } from './contexts/LocaleContext';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <LocaleProvider defaultValue="ko">
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </LocaleProvider>,
+  document.getElementById('root'),
 );
